@@ -96,6 +96,22 @@ curl http://127.0.0.1:8891/api/health
 
 如果服务器本机健康检查正常，但外网访问失败，通常是腾讯云安全组或轻量服务器防火墙没有放行端口。
 
+## HTTPS
+
+当前线上站点使用 Certbot / Let's Encrypt 签发证书，并启用了 `certbot-renew.timer` 自动续期。证书配置位于：
+
+```text
+/etc/nginx/conf.d/kaiwen-yimeiji.conf
+/etc/letsencrypt/live/chatgptimage2.art/
+```
+
+手动检查证书：
+
+```bash
+certbot certificates
+systemctl list-timers --all | grep -i certbot
+```
+
 ## 需要在腾讯云控制台确认
 
 - CVM：安全组入站规则放行 TCP `8891`。
