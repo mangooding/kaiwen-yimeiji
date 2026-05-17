@@ -167,7 +167,7 @@ function renderPromptCard(item) {
       <div class="prompt-preview">${escapeHtml(item.promptPreview || item.prompt || "")}</div>
       <div class="flag-row">${flags}</div>
       <div class="card-actions">
-        <a class="source-link" href="${escapeHtml(item.sourceUrl || item.sourceRepo)}" data-open-source title="打开这条提示词的原始来源页面">
+        <a class="source-link" href="${escapeHtml(item.sourceUrl || item.sourceRepo)}" title="打开这条提示词的原始来源页面">
           ${iconExternal()} 打开来源
         </a>
         <button class="copy-button" type="button" data-copy-prompt="${escapeHtml(item.id)}">
@@ -274,19 +274,18 @@ flagFilter.addEventListener("change", () => {
 
 loadMoreButton.addEventListener("click", () => searchPrompts({ append: true }));
 
-document.addEventListener("click", (event) => {
-  const sourceLink = event.target.closest("[data-open-source]");
-  if (!sourceLink) return;
-  event.preventDefault();
-  window.location.assign(sourceLink.href);
-});
-
 grid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-copy-prompt]");
   if (!button) return;
   const item = promptCache.get(button.dataset.copyPrompt);
   if (!item) return;
   copyText(item.prompt);
+});
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-copy-url]");
+  if (!button) return;
+  copyText(button.dataset.copyUrl);
 });
 
 async function init() {

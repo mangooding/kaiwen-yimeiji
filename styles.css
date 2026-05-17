@@ -461,18 +461,33 @@ main {
   vertical-align: 1px;
 }
 
-.source-card a {
+.source-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.source-card a,
+.source-actions button {
   width: 100%;
   min-height: 42px;
-  margin-top: auto;
   color: var(--ink);
+  background: transparent;
   border: 1px solid #cfd9e6;
   border-radius: var(--radius);
   font-size: 14px;
   font-weight: 850;
+  cursor: pointer;
 }
 
-.source-card a:hover {
+.source-actions button {
+  min-width: 86px;
+  padding: 0 12px;
+}
+
+.source-card a:hover,
+.source-actions button:hover {
   color: white;
   background: var(--ink);
   border-color: var(--ink);
