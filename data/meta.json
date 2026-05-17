@@ -1,0 +1,127 @@
+{
+  "generatedAt": "2026-05-17T02:39:50.812834+00:00",
+  "total": 7391,
+  "sources": {
+    "youmind": {
+      "name": "YouMind",
+      "repo": "https://github.com/YouMind-OpenLab/awesome-gpt-image-2",
+      "license": "CC BY 4.0",
+      "files": 16,
+      "records": 2016,
+      "languages": {
+        "de-DE": 126,
+        "en": 126,
+        "es-419": 126,
+        "es-ES": 126,
+        "fr-FR": 126,
+        "hi-IN": 126,
+        "it-IT": 126,
+        "ja-JP": 126,
+        "ko-KR": 126,
+        "pt-BR": 126,
+        "pt-PT": 126,
+        "th-TH": 126,
+        "tr-TR": 126,
+        "vi-VN": 126,
+        "zh": 126,
+        "zh-TW": 126
+      }
+    },
+    "zerolu": {
+      "name": "ZeroLu",
+      "repo": "https://github.com/ZeroLu/awesome-gpt-image",
+      "license": "Repository license file",
+      "files": 8,
+      "records": 443,
+      "languages": {
+        "de": 53,
+        "en": 72,
+        "es": 53,
+        "fr": 53,
+        "ja": 53,
+        "ko": 53,
+        "zh-CN": 53,
+        "zh-TW": 53
+      }
+    },
+    "anil": {
+      "name": "Anil-matcha",
+      "repo": "https://github.com/Anil-matcha/Awesome-GPT-Image-2-API-Prompts",
+      "license": "CC BY 4.0",
+      "files": 1,
+      "records": 52,
+      "languages": {
+        "en": 52
+      }
+    },
+    "evolink": {
+      "name": "EvoLinkAI",
+      "repo": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "license": "Repository license file",
+      "files": 77,
+      "records": 4880,
+      "languages": {
+        "de": 436,
+        "en": 520,
+        "es": 436,
+        "fr": 436,
+        "ja": 436,
+        "ko": 436,
+        "pt": 436,
+        "ru": 436,
+        "tr": 436,
+        "zh-CN": 436,
+        "zh-TW": 436
+      }
+    }
+  },
+  "categories": {
+    "UI 设计": 1120,
+    "人像写真": 1614,
+    "信息图": 26,
+    "字体排版": 34,
+    "广告创意": 1232,
+    "插画海报": 254,
+    "效果对比": 370,
+    "海报排版": 1930,
+    "游戏场景": 180,
+    "电商主图": 194,
+    "社媒内容": 101,
+    "角色设计": 336
+  },
+  "languages": {
+    "de": 489,
+    "de-DE": 126,
+    "en": 770,
+    "es": 489,
+    "es-419": 126,
+    "es-ES": 126,
+    "fr": 489,
+    "fr-FR": 126,
+    "hi-IN": 126,
+    "it-IT": 126,
+    "ja": 489,
+    "ja-JP": 126,
+    "ko": 489,
+    "ko-KR": 126,
+    "pt": 436,
+    "pt-BR": 126,
+    "pt-PT": 126,
+    "ru": 436,
+    "th-TH": 126,
+    "tr": 436,
+    "tr-TR": 126,
+    "vi-VN": 126,
+    "zh": 126,
+    "zh-CN": 489,
+    "zh-TW": 615
+  },
+  "flags": {
+    "api_ready": 16,
+    "celebrity_or_public_figure": 135,
+    "has_text": 3968,
+    "requires_reference": 339,
+    "sensitive_style": 241
+  },
+  "note": "Imported from cloned GitHub repository Markdown files. Multi-language README/case files are preserved as separate searchable records."
+}

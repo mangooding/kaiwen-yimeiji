@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="开文伊美姬是一个面向中文创作者的 GPT-Image-2 提示词灵感库，整理多类真实创作场景、模板结构和 API 调用思路。"
+    />
+    <title>开文伊美姬 | GPT-Image-2 提示词灵感库</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到开文伊美姬首页">
+        <span class="brand-mark">K</span>
+        <span>开文伊美姬</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#sources">精选仓库</a>
+        <a href="#templates">模板工坊</a>
+        <a href="#api">API 调用结构</a>
+        <a href="#sources-note">来源说明</a>
+      </nav>
+      <a class="header-action" href="#templates">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+        开始搜索
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">开文伊美姬</h1>
+          <p class="hero-subtitle">
+            GPT-Image-2 提示词灵感库，把公开优秀仓库的场景、结构和创作方法重新整理成中文可搜索工作台。
+          </p>
+
+          <div class="search-workbench" role="search">
+            <label for="prompt-search">搜索场景 / 风格 / 用途</label>
+            <div class="search-row">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" />
+              </svg>
+              <input
+                id="prompt-search"
+                type="search"
+                placeholder="例如：电商主图 / UI / 角色"
+                autocomplete="off"
+              />
+              <button class="clear-button" type="button" data-clear-search>清除</button>
+            </div>
+            <div class="quick-tags" aria-label="快捷分类">
+              <button type="button" data-filter="电商">电商主图</button>
+              <button type="button" data-filter="UI">UI Mockup</button>
+              <button type="button" data-filter="角色">角色一致性</button>
+              <button type="button" data-filter="API">API 结构</button>
+            </div>
+            <p class="api-status" id="api-status">正在连接本地提示词后台...</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="提示词灵感拼贴">
+          <img src="assets/hero-gallery.png" alt="由信息图、电商主图、移动界面和游戏场景组成的提示词灵感拼贴" />
+          <div class="visual-meter" aria-label="站点内容摘要">
+            <span>4 个来源</span>
+            <span>8 类场景</span>
+            <span>一键复制</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources" class="section source-section" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <span class="section-index">01</span>
+          <div>
+            <h2 id="sources-title">精选仓库</h2>
+            <p>按用途重新拆解四个公开项目：大库检索、创作者案例、API 模板和可复用工作流。</p>
+          </div>
+        </div>
+
+        <div class="source-grid">
+          <article class="source-card" style="--accent: #246bfe">
+            <div class="source-topline">
+              <span>YouMind</span>
+              <span data-source-count="youmind">GitHub 6k+</span>
+            </div>
+            <h3>多语言提示词总库</h3>
+            <p>适合先找场景方向：信息图、封面、电商、游戏素材、App 界面等分类很细。</p>
+            <ul>
+              <li>2000+ 案例和预览图</li>
+              <li>16 种语言入口</li>
+              <li>偏搜索和素材导航</li>
+            </ul>
+            <a href="https://github.com/YouMind-OpenLab/awesome-gpt-image-2" target="_blank" rel="noreferrer">查看来源</a>
+          </article>
+
+          <article class="source-card" style="--accent: #ff5a52">
+            <div class="source-topline">
+              <span>ZeroLu</span>
+              <span data-source-count="zerolu">GitHub 1.4k+</span>
+            </div>
+            <h3>创作者高阶案例</h3>
+            <p>适合学画面质感：摄影、游戏场景、UI、排版和角色连续性案例集中。</p>
+            <ul>
+              <li>X 创作者案例整理</li>
+              <li>强调效果图对比</li>
+              <li>覆盖风格迁移</li>
+            </ul>
+            <a href="https://github.com/ZeroLu/awesome-gpt-image" target="_blank" rel="noreferrer">查看来源</a>
+          </article>
+
+          <article class="source-card" style="--accent: #00a7a0">
+            <div class="source-topline">
+              <span>Anil-matcha</span>
+              <span data-source-count="anil">GitHub 2k+</span>
+            </div>
+            <h3>API 友好模板</h3>
+            <p>适合开发者复制结构：人像、海报、UI Mockup、游戏截图、角色卡分组清楚。</p>
+            <ul>
+              <li>围绕 OpenAI API 编排</li>
+              <li>模板粒度稳定</li>
+              <li>便于批量调用</li>
+            </ul>
+            <a href="https://github.com/Anil-matcha/Awesome-GPT-Image-2-API-Prompts" target="_blank" rel="noreferrer">查看来源</a>
+          </article>
+
+          <article class="source-card" style="--accent: #f0a400">
+            <div class="source-topline">
+              <span>EvoLinkAI</span>
+              <span data-source-count="evolink">GitHub 14.7k+</span>
+            </div>
+            <h3>提示词与工作流</h3>
+            <p>适合搭建生产链路：7 大类提示词、API 用法、可复用视觉流程和多语言文档。</p>
+            <ul>
+              <li>359+ 高质量案例</li>
+              <li>含 API 集成说明</li>
+              <li>真实输出图参考</li>
+            </ul>
+            <a href="https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts" target="_blank" rel="noreferrer">查看来源</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="templates" class="section template-section" aria-labelledby="templates-title">
+        <div class="section-heading split-heading">
+          <div class="heading-left">
+            <span class="section-index">02</span>
+            <div>
+              <h2 id="templates-title">本地检索库</h2>
+              <p>后台已导入多语言提示词记录，支持本地全文搜索、来源筛选、语言筛选和一键复制。</p>
+            </div>
+          </div>
+          <div class="result-count" aria-live="polite">
+            <strong id="result-count">8</strong>
+            <span>条模板</span>
+          </div>
+        </div>
+
+        <div class="library-toolbar" aria-label="检索筛选">
+          <label>
+            来源
+            <select id="source-filter">
+              <option value="">全部来源</option>
+            </select>
+          </label>
+          <label>
+            语言
+            <select id="language-filter">
+              <option value="">全部语言</option>
+            </select>
+          </label>
+          <label>
+            标记
+            <select id="flag-filter">
+              <option value="">全部标记</option>
+              <option value="requires_reference">需要参考图</option>
+              <option value="has_text">含文字渲染</option>
+              <option value="api_ready">API 结构</option>
+              <option value="celebrity_or_public_figure">公众人物</option>
+              <option value="sensitive_style">敏感风格</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="category-tabs" id="category-tabs" role="tablist" aria-label="模板分类">
+          <button class="active" type="button" data-category="全部">全部</button>
+        </div>
+
+        <div class="template-grid" id="template-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>没有找到匹配模板，换个关键词试试。</p>
+        <button class="load-more-button" id="load-more" type="button" hidden>加载更多</button>
+      </section>
+
+      <section id="api" class="section api-section" aria-labelledby="api-title">
+        <div class="section-heading">
+          <span class="section-index">03</span>
+          <div>
+            <h2 id="api-title">API 调用结构</h2>
+            <p>把提示词拆成稳定字段，方便做批量生成、审核和版本回溯。</p>
+          </div>
+        </div>
+
+        <div class="api-layout">
+          <div class="flow-steps" aria-label="API 流程">
+            <div class="flow-step">
+              <span>1</span>
+              <strong>选择场景</strong>
+              <p>从分类、来源和画面目标开始，先确认输出用途。</p>
+            </div>
+            <div class="flow-step">
+              <span>2</span>
+              <strong>填入变量</strong>
+              <p>替换主体、风格、构图、光线、比例、文字约束。</p>
+            </div>
+            <div class="flow-step">
+              <span>3</span>
+              <strong>调用生成</strong>
+              <p>把最终提示词传给图像 API，并记录版本与参数。</p>
+            </div>
+            <div class="flow-step">
+              <span>4</span>
+              <strong>复盘沉淀</strong>
+              <p>保存成自己的可复用模板，不再从零试错。</p>
+            </div>
+          </div>
+
+          <div class="code-panel" aria-label="API 请求示例">
+            <div class="code-tabs">
+              <span>request.js</span>
+              <button type="button" data-copy-code>
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M8 8h10v12H8z" />
+                  <path d="M6 16H4V4h12v2" />
+                </svg>
+                复制
+              </button>
+            </div>
+            <pre><code id="api-code">const response = await client.images.generate({
+  model: "gpt-image-2",
+  prompt: buildPrompt({
+    useCase: "电商主图",
+    subject: "一款透明玻璃香水瓶",
+    style: "高端杂志棚拍",
+    composition: "正面构图，留出电商标题区域",
+    constraints: "无水印，文字必须清晰"
+  }),
+  size: "1536x1024",
+  quality: "high"
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources-note" class="section note-section" aria-labelledby="note-title">
+        <h2 id="note-title">来源说明</h2>
+        <p>
+          本站是“开文伊美姬”的原创整理界面：参考公开 GitHub 仓库的分类方式和场景覆盖，不复制完整提示词内容。
+          Star 数和仓库描述基于 2026-05-17 访问 GitHub 页面时看到的信息，后续可能变化。
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>开文伊美姬</span>
+      <span>面向中文创作者的提示词导航和模板工作台</span>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" id="toast">已复制</div>
+    <script src="script.js"></script>
+  </body>
+</html>
