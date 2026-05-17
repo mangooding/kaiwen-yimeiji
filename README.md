@@ -182,6 +182,18 @@ python scripts/import_prompts.py
 
 ## 云端部署
 
+### 腾讯云 CVM / 轻量应用服务器
+
+仓库已包含腾讯云一键部署脚本，详见 [docs/tencent-cloud-deploy.md](docs/tencent-cloud-deploy.md)。
+
+服务器上可直接运行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/mangooding/kaiwen-yimeiji/main/deploy/tencent-cvm-docker.sh | bash
+```
+
+默认会用 Docker 启动服务并监听 `8891` 端口。请在腾讯云控制台放行 TCP `8891`。
+
 ### Docker / VPS
 
 ```bash
