@@ -388,7 +388,8 @@ main {
 .template-card,
 .flow-step,
 .code-panel,
-.note-section {
+.note-section,
+.public-interest-section {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -916,12 +917,42 @@ code {
   line-height: 1.72;
 }
 
-.note-section {
+.note-section,
+.public-interest-section {
   padding: 34px;
 }
 
-.note-section h2 {
+.note-section h2,
+.public-interest-section h2 {
   font-size: clamp(28px, 3vw, 40px);
+}
+
+.public-interest-section {
+  margin-bottom: 38px;
+}
+
+.public-interest-copy {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.public-interest-section p {
+  max-width: 920px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.public-interest-section a,
+.site-footer a {
+  color: var(--ink);
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .site-footer {
@@ -1119,6 +1150,14 @@ code {
 
   .note-section {
     padding: 24px;
+  }
+
+  .public-interest-section {
+    padding: 24px;
+  }
+
+  .public-interest-copy {
+    grid-template-columns: 1fr;
   }
 }
 
