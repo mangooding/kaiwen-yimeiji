@@ -1,0 +1,15 @@
+[Unit]
+Description=Kaiwen Yimeiji prompt site
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/kaiwen-yimeiji
+Environment=HOST=127.0.0.1
+Environment=PORT=8891
+ExecStart=/usr/bin/python3 /opt/kaiwen-yimeiji/server.py --host 127.0.0.1 --port 8891
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
